@@ -1,13 +1,18 @@
+import 'react-native-gesture-handler';
+
 import React from 'react';
-import { Text, View } from 'react-native';
+import { StatusBar } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+
 import './config/ReactotronConfig';
 
-// import { Container } from './styles';
+import Routes from './routes';
 
 export default function App() {
   return (
-    <View>
-      <Text>Ola dentro do index</Text>
-    </View>
+    <NavigationContainer>
+      <StatusBar barStyle="light-content" backgroundColor="#7159c1" />
+      <Routes />
+    </NavigationContainer>
   );
 }

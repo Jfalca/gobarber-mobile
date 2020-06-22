@@ -21,15 +21,24 @@ module.exports = {
         "ecmaVersion": 11,
         "sourceType": "module"
     },
-    "plugins": [
-        "react",
-        'prettier'
-    ],
+    "plugins": ["react", "jsx-a11y", "import", "react-hooks", "prettier"],
     "rules": {
+      'react/prop-types': [0, { ignore: [], customValidators: [], skipUndeclared: true }],
       'prettier/prettier': 'error',
       'react/jsx-filename-extension': ['warn', { extensions: ['.js', '.jsx'] }],
       'import/prefer-default-export': 'off',
       "no-console": ["error", { allow: ["tron"] }],
+      "no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
+      "react/jsx-one-expression-per-line": "off",
+      "global-require": "off",
+      "react-native/no-raw-text": "off",
+      "no-param-reassign": "off",
+      "no-underscore-dangle": "off",
+      camelcase: "off",
+      "no-console": ["error", { allow: ["tron"] }],
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn",
+      "react/jsx-props-no-spreading": "off"
     },
     settings:{
       "import/resolver":{
