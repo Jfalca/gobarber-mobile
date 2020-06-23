@@ -12,7 +12,7 @@ function Input({ style, icon, ...rest }, ref) {
   );
 }
 
-Input.prototype = {
+Input.propTypes = {
   icon: Proptypes.string,
   style: Proptypes.oneOfType([Proptypes.object, Proptypes.array]),
 };
