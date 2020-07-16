@@ -1,20 +1,13 @@
 import React from 'react';
-import { createStackNavigator } from '@react-navigation/stack';
+import { useSelector } from 'react-redux';
 
-import SignIn from '~/pages/SignIn';
-import SignUp from '~/pages/SignUp';
+import AuthRoutes from './auth.routes';
+import AppRoutes from './app.routes';
 
-const Auth = createStackNavigator();
+const Routes = () => {
+  const { signed } = useSelector((state) => state.auth);
 
-const AuthRoutes = () => (
-  <Auth.Navigator
-    screenOptions={{
-      headerShown: false,
-    }}
-  >
-    <Auth.Screen name="SignIn" component={SignIn} />
-    <Auth.Screen name="SignUp" component={SignUp} />
-  </Auth.Navigator>
-);
+  return signed ? <AppRoutes /> : <AuthRoutes />;
+};
 
-export default AuthRoutes;
+export default Routes;
