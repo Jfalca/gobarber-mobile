@@ -15,7 +15,7 @@
     "@react-navigation/bottom-tabs": "^5.6.1",
     "@react-navigation/native": "^5.5.1",
     "@react-navigation/stack": "^5.5.1",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "immer": "^7.0.4",
     "prop-types": "^15.7.2",
     "react": "16.11.0",
